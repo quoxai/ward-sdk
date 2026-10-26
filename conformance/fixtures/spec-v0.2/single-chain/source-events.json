@@ -1,0 +1,31 @@
+{
+  "aee-env-001": {
+    "aee_version": "0.1",
+    "envelope_id": "aee-env-001",
+    "intent": "aee.status.report",
+    "from": "agent:monitor-02",
+    "to": "agent:coordinator-01",
+    "ts": "2026-03-05T14:59:58.000Z",
+    "payload": {
+      "status": "healthy",
+      "checks_passed": 12
+    }
+  },
+  "aocl-dec-002": {
+    "aocl_version": "0.1",
+    "decision_id": "aocl-dec-002",
+    "layer": "L4",
+    "decision": "approved",
+    "subject": "workflow-run-8841",
+    "policy": "default-egress",
+    "ts": "2026-03-05T15:00:00.500Z"
+  },
+  "volt-bundle-003": {
+    "volt_version": "0.1",
+    "bundle_id": "volt-bundle-003",
+    "event_count": 42,
+    "first_event_hash": "3dcacc6627eb8d0aebdcc59f4e11affaeec8e0b78893a8df166241789e646f71",
+    "last_event_hash": "ec776793f3cb20d24dabcc4937979120dc9014e4a40eda2e66c5f612483b6ad9",
+    "created_ts": "2026-03-05T15:00:04.000Z"
+  }
+}

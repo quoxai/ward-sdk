@@ -1,0 +1,9 @@
+{
+  "chain_id": "ward:meta/quox-global",
+  "genesis_hash": "81b83fccff97ccbe2897a3d9e09f0fe99e8c2146e3837fd00105c99ab04db378",
+  "scope": "meta-chain witnessing all quox sub-chain tips",
+  "created_at": "2026-03-05T15:55:00.000Z",
+  "entry_count": 2,
+  "head_seq": 2,
+  "head_chain_hash": "00790dccb042f8d42762c0f8a495389a314e3ce27c0180deeffee67f2bb194bb"
+}

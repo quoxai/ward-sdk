@@ -1,0 +1,57 @@
+{
+  "name": "@quox/ward",
+  "version": "0.1.0",
+  "description": "WARD — Write-once Append-only Receipt Digests. Tamper-evident hash-chain witnessing (chain math + verification) as a zero-dependency standalone library.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./store": {
+      "types": "./dist/src/store/index.d.ts",
+      "import": "./dist/src/store/index.js"
+    }
+  },
+  "bin": {
+    "ward-verify": "./dist/bin/ward-verify.js"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "SPEC-POINTERS.md",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "fixtures": "tsc -p tsconfig.gen.json && node dist/conformance/generate.js"
+  },
+  "keywords": [
+    "ward",
+    "hash-chain",
+    "tamper-evident",
+    "audit",
+    "witness",
+    "ed25519",
+    "quox"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

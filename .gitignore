@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+coverage/
+
+# Throwaway Ed25519 signing key used only to (re)generate signed fixtures.
+# The public key + baked signatures are committed; the private key is not.
+conformance/fixtures/tip-privkey.pem

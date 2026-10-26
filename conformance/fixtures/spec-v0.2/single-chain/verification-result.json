@@ -1,0 +1,12 @@
+{
+  "status": "INTACT",
+  "chain_id": "ward:org/quox/env/staging",
+  "ward_version": "0.2",
+  "entry_count": 3,
+  "head_seq": 3,
+  "head_chain_hash": "88893edd241f630801a44bb4b839f85200a1e47ac38b5d6ec895c85e3a937791",
+  "genesis_verified": true,
+  "tips_verified": 1,
+  "signatures_verified": 1,
+  "warnings": []
+}

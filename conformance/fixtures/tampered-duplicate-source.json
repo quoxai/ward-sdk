@@ -1,0 +1,31 @@
+{
+  "chain_id": "ward:org/quox/env/staging",
+  "entries": [
+    {
+      "ward_version": "0.1",
+      "ward_entry_id": "01WARD-DUP-E001",
+      "chain_id": "ward:org/quox/env/staging",
+      "seq": 1,
+      "witnessed_at": "2026-03-05T15:00:00.000Z",
+      "source_kind": "AEE",
+      "source_id": "aee-dup-1",
+      "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "prev_chain_hash": "5dd2bc73d5b393ef1af8161902fda6e821bcd3fc075088d315bbf38c3e12ff2e",
+      "chain_hash": "2eca7a2b8ab5b815c3b72bad8ae8e55abeead11d716188c790d4a34d62509255",
+      "issuer_id": "ward-issuer-stg-01"
+    },
+    {
+      "ward_version": "0.1",
+      "ward_entry_id": "01WARD-DUP-E002",
+      "chain_id": "ward:org/quox/env/staging",
+      "seq": 2,
+      "witnessed_at": "2026-03-05T15:00:01.000Z",
+      "source_kind": "AEE",
+      "source_id": "aee-dup-1",
+      "payload_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "prev_chain_hash": "2eca7a2b8ab5b815c3b72bad8ae8e55abeead11d716188c790d4a34d62509255",
+      "chain_hash": "4f12de75217e9590c07c397f03eb35823c1f9ef569f665be2accd95d26765fa7",
+      "issuer_id": "ward-issuer-stg-01"
+    }
+  ]
+}

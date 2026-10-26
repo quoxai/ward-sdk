@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/quoxai/ward/schemas/ward-verification-result.schema.json",
+  "title": "WARD Verification Result",
+  "description": "Output format for a WARD verifier (v0.2). See VERIFICATION.md sections 4-5.",
+  "type": "object",
+  "required": [
+    "status"
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "status": {
+          "const": "INTACT"
+        },
+        "chain_id": {
+          "type": "string"
+        },
+        "ward_version": {
+          "type": "string"
+        },
+        "entry_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "head_seq": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "head_chain_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "genesis_verified": {
+          "type": "boolean"
+        },
+        "tips_verified": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "signatures_verified": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    {
+      "properties": {
+        "status": {
+          "const": "BROKEN"
+        },
+        "chain_id": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Standard failure reason code",
+          "enum": [
+            "VERSION_DOWNGRADE",
+            "SCHEMA_INVALID",
+            "GENESIS_MISMATCH",
+            "CHAIN_HASH_MISMATCH",
+            "CHAIN_LINK_BROKEN",
+            "SEQ_INVALID",
+            "DUPLICATE_SOURCE",
+            "TIP_MISMATCH",
+            "TIP_SIGNATURE_INVALID"
+          ]
+        },
+        "details": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "status",
+        "reason"
+      ]
+    },
+    {
+      "properties": {
+        "status": {
+          "const": "PARTIAL"
+        },
+        "chain_id": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string",
+          "description": "PARTIAL reason code. INCOMPLETE_CHAIN is the standard code (VERIFICATION.md section 5); implementations MAY define others, and consumers MUST treat unknown codes per the status field, never as success."
+        },
+        "details": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "status",
+        "reason"
+      ]
+    }
+  ]
+}

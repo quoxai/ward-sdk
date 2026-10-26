@@ -1,0 +1,57 @@
+{
+  "chain_id": "ward:org/quox/env/staging",
+  "entries": [
+    {
+      "ward_version": "0.1",
+      "ward_entry_id": "01WARD-STG-E001",
+      "chain_id": "ward:org/quox/env/staging",
+      "seq": 1,
+      "witnessed_at": "2026-03-05T15:00:00.000Z",
+      "source_kind": "AEE",
+      "source_id": "aee-env-001",
+      "payload_hash": "aaaa1111bbbb2222cccc3333dddd4444eeee5555ffff6666aaaa7777bbbb8888",
+      "prev_chain_hash": "5dd2bc73d5b393ef1af8161902fda6e821bcd3fc075088d315bbf38c3e12ff2e",
+      "chain_hash": "00d7d44043e84cc8d87266ac55c6094c71807ff851beec0be833fb14b9cce0c8",
+      "issuer_id": "ward-issuer-stg-01"
+    },
+    {
+      "ward_version": "0.1",
+      "ward_entry_id": "01WARD-STG-E002",
+      "chain_id": "ward:org/quox/env/staging",
+      "seq": 2,
+      "witnessed_at": "2026-03-05T15:00:01.000Z",
+      "source_kind": "AOCL",
+      "source_id": "aocl-dec-002",
+      "payload_hash": "1111aaaa2222bbbb3333cccc4444dddd5555eeee6666ffff7777aaaa8888bbbb",
+      "prev_chain_hash": "00d7d44043e84cc8d87266ac55c6094c71807ff851beec0be833fb14b9cce0c8",
+      "chain_hash": "ba97b4bd13ceebfa3a7bcecad1de12cada8e9ec33a42eca9fe3487d9659ba0d8",
+      "issuer_id": "ward-issuer-stg-01"
+    },
+    {
+      "ward_version": "0.1",
+      "ward_entry_id": "01WARD-STG-E003",
+      "chain_id": "ward:org/quox/env/staging",
+      "seq": 3,
+      "witnessed_at": "2026-03-05T15:00:05.000Z",
+      "source_kind": "VOLT",
+      "source_id": "volt-bundle-003",
+      "payload_hash": "ffff9999eeee8888dddd7777cccc6666bbbb5555aaaa444499993333888822ff",
+      "prev_chain_hash": "ba97b4bd13ceebfa3a7bcecad1de12cada8e9ec33a42eca9fe3487d9659ba0d8",
+      "chain_hash": "2da8387c665e3acff8a39607fc6c9bd7aaa547c482f491b49ff50409ecf44a24",
+      "issuer_id": "ward-issuer-stg-01"
+    }
+  ],
+  "tips": [
+    {
+      "tip_id": "tip-stg-002",
+      "chain_id": "ward:org/quox/env/staging",
+      "tip_seq": 3,
+      "tip_chain_hash": "2da8387c665e3acff8a39607fc6c9bd7aaa547c482f491b49ff50409ecf44a24",
+      "entry_count": 3,
+      "created_at": "2026-03-05T15:01:00.000Z",
+      "sig": "IzveIggFx7E9EbVnh/lZXQYGQ13UR6wukyZFdGALHR+AjO4IXLxigN2CT7szQzSm4hgQgZLIQ5PVWQttfpkDAQ==",
+      "key_id": "406de12dd8a7c8da",
+      "notes": "End-of-batch tip for staging, March 5 2026"
+    }
+  ]
+}

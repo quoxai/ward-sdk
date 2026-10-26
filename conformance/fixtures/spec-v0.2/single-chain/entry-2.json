@@ -1,0 +1,13 @@
+{
+  "ward_version": "0.2",
+  "ward_entry_id": "01WARD-STG-E002",
+  "chain_id": "ward:org/quox/env/staging",
+  "seq": 2,
+  "witnessed_at": "2026-03-05T15:00:01.000Z",
+  "source_kind": "AOCL",
+  "source_id": "aocl-dec-002",
+  "payload_hash": "47db4d957b52b6b7d530121bc8c07d0926e73b014a4fa3520d9bcab1dbc241ce",
+  "prev_chain_hash": "1e3921187a1dc804428f55e323bb11bc16a213ee728e3cea8c07b0095e19062e",
+  "issuer_id": "ward-issuer-stg-01",
+  "chain_hash": "1df493cf03fbca621ccf5a335ed45c159e0b435e13d234b4ffb1ed9e3e391713"
+}

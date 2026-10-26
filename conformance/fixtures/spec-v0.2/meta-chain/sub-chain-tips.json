@@ -1,0 +1,22 @@
+{
+  "tip-prod-001": {
+    "tip_id": "tip-prod-001",
+    "chain_id": "ward:org/quox/env/production",
+    "tip_seq": 1,
+    "tip_chain_hash": "6078eafecfd309ca8aa078f4d90017f17d65e53e1c9bdf8d3ac068d05ce4a1b4",
+    "entry_count": 1,
+    "created_at": "2026-03-05T16:00:00.000Z",
+    "sig": "WevR97WQ39gqeleomHXZl0/XEnFTdPlNIEyGc8PeQCU1EUaOVb6Ww9zpufUnG67SwS/34CtuNzK2Q/miyzbtDQ==",
+    "key_id": "ed25519:sha256:765fe10404e81eb5"
+  },
+  "tip-stg-001": {
+    "tip_id": "tip-stg-001",
+    "chain_id": "ward:org/quox/env/staging",
+    "tip_seq": 3,
+    "tip_chain_hash": "88893edd241f630801a44bb4b839f85200a1e47ac38b5d6ec895c85e3a937791",
+    "entry_count": 3,
+    "created_at": "2026-03-05T16:00:01.000Z",
+    "sig": "lHFDS97QRZSwAcmtxDyJxSNDutvZLJmcQIPyX4UeKYSPK+IsVie5xWQkTOrfs0ioVmQHcUPTJpZOmtM0XIOCDA==",
+    "key_id": "ed25519:sha256:765fe10404e81eb5"
+  }
+}

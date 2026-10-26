@@ -1,0 +1,13 @@
+{
+  "ward_version": "0.2",
+  "ward_entry_id": "01WARD-META-E001",
+  "chain_id": "ward:meta/quox-global",
+  "seq": 1,
+  "witnessed_at": "2026-03-05T16:00:05.000Z",
+  "source_kind": "WARD",
+  "source_id": "ward:org/quox/env/production::1",
+  "payload_hash": "dcd9838d47580cc5d9f6af2b92f994245a52370d05820a7f4ce689e85ce89a8d",
+  "prev_chain_hash": "81b83fccff97ccbe2897a3d9e09f0fe99e8c2146e3837fd00105c99ab04db378",
+  "issuer_id": "ward-issuer-meta-01",
+  "chain_hash": "7e9b77784ba8be4e92089550802d59d5e667613f1d790071f7f053c01cbed063"
+}

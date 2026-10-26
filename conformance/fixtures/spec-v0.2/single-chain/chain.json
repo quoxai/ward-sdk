@@ -1,0 +1,9 @@
+{
+  "chain_id": "ward:org/quox/env/staging",
+  "genesis_hash": "5dd2bc73d5b393ef1af8161902fda6e821bcd3fc075088d315bbf38c3e12ff2e",
+  "scope": "staging environment, all source kinds",
+  "created_at": "2026-03-05T14:55:00.000Z",
+  "entry_count": 3,
+  "head_seq": 3,
+  "head_chain_hash": "88893edd241f630801a44bb4b839f85200a1e47ac38b5d6ec895c85e3a937791"
+}

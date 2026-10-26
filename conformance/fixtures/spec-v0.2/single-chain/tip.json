@@ -1,0 +1,12 @@
+{
+  "tip_id": "tip-stg-002",
+  "chain_id": "ward:org/quox/env/staging",
+  "tip_seq": 3,
+  "tip_chain_hash": "88893edd241f630801a44bb4b839f85200a1e47ac38b5d6ec895c85e3a937791",
+  "entry_count": 3,
+  "created_at": "2026-03-05T15:01:00.000Z",
+  "sig": "lHFDS97QRZSwAcmtxDyJxSNDutvZLJmcQIPyX4UeKYSPK+IsVie5xWQkTOrfs0ioVmQHcUPTJpZOmtM0XIOCDA==",
+  "key_id": "ed25519:sha256:765fe10404e81eb5",
+  "sink_ref": "https://gitea.example.com/ward-tips/tags/stg-tip-002",
+  "notes": "End-of-batch tip for staging, March 5 2026"
+}

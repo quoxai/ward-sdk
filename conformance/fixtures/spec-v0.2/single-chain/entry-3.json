@@ -1,0 +1,13 @@
+{
+  "ward_version": "0.2",
+  "ward_entry_id": "01WARD-STG-E003",
+  "chain_id": "ward:org/quox/env/staging",
+  "seq": 3,
+  "witnessed_at": "2026-03-05T15:00:05.000Z",
+  "source_kind": "VOLT",
+  "source_id": "volt-bundle-003",
+  "payload_hash": "b56a5880cc8942ace3836f6108e991dd13da2af7d587db77cd6fbc68132a16c0",
+  "prev_chain_hash": "1df493cf03fbca621ccf5a335ed45c159e0b435e13d234b4ffb1ed9e3e391713",
+  "issuer_id": "ward-issuer-stg-01",
+  "chain_hash": "88893edd241f630801a44bb4b839f85200a1e47ac38b5d6ec895c85e3a937791"
+}

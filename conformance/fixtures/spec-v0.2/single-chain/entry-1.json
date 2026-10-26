@@ -1,0 +1,13 @@
+{
+  "ward_version": "0.2",
+  "ward_entry_id": "01WARD-STG-E001",
+  "chain_id": "ward:org/quox/env/staging",
+  "seq": 1,
+  "witnessed_at": "2026-03-05T15:00:00.000Z",
+  "source_kind": "AEE",
+  "source_id": "aee-env-001",
+  "payload_hash": "4aa965e8e65ed431398dd8cb3702c28260e86e7a00f47e6fa697bcaa6d68bf32",
+  "prev_chain_hash": "5dd2bc73d5b393ef1af8161902fda6e821bcd3fc075088d315bbf38c3e12ff2e",
+  "issuer_id": "ward-issuer-stg-01",
+  "chain_hash": "1e3921187a1dc804428f55e323bb11bc16a213ee728e3cea8c07b0095e19062e"
+}

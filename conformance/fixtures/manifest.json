@@ -1,0 +1,52 @@
+{
+  "chain_id": "ward:org/quox/env/staging",
+  "pubkey": "tip-pubkey.pem",
+  "fixtures": [
+    {
+      "file": "valid-chain.json",
+      "expect_status": "INTACT"
+    },
+    {
+      "file": "valid-chain-with-tip.json",
+      "expect_status": "INTACT",
+      "pubkey": true,
+      "expect_signatures_verified": 1
+    },
+    {
+      "file": "tampered-modified-entry.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "CHAIN_HASH_MISMATCH"
+    },
+    {
+      "file": "tampered-broken-link.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "CHAIN_LINK_BROKEN"
+    },
+    {
+      "file": "tampered-genesis.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "GENESIS_MISMATCH"
+    },
+    {
+      "file": "tampered-seq.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "SEQ_INVALID"
+    },
+    {
+      "file": "tampered-duplicate-source.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "DUPLICATE_SOURCE"
+    },
+    {
+      "file": "tampered-forged-tip.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "TIP_MISMATCH"
+    },
+    {
+      "file": "tampered-bad-signature.json",
+      "expect_status": "BROKEN",
+      "expect_reason": "TIP_SIGNATURE_INVALID",
+      "pubkey": true
+    }
+  ]
+}

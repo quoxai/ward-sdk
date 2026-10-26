@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/quoxai/ward/schemas/ward-entry.schema.json",
+  "title": "WARD Entry",
+  "description": "A single ward entry (v0.2). A content-free hash-chain receipt witnessing a source event. See SPEC.md section 6.",
+  "type": "object",
+  "required": [
+    "ward_version",
+    "ward_entry_id",
+    "chain_id",
+    "seq",
+    "witnessed_at",
+    "source_kind",
+    "source_id",
+    "payload_hash",
+    "prev_chain_hash",
+    "chain_hash",
+    "issuer_id"
+  ],
+  "properties": {
+    "ward_version": {
+      "type": "string",
+      "description": "Protocol version, e.g. \"0.2\". Selects the chain-hash scheme (SPEC.md section 16.1): \"0.2\" canonical-JSON hash body, \"0.1\" legacy concatenation (verify-only).",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "ward_entry_id": {
+      "type": "string",
+      "description": "Unique identifier for this entry within the chain",
+      "minLength": 1
+    },
+    "chain_id": {
+      "type": "string",
+      "description": "Identifier for the chain this entry belongs to. For ward_version 0.2 and later it MUST NOT contain the reserved \"::\" sequence (SPEC.md section 5.2); v0.1 entries predate that rule and a violation warns instead (SPEC.md Appendix A).",
+      "minLength": 1
+    },
+    "seq": {
+      "type": "integer",
+      "description": "Monotonically increasing sequence number, starting at 1",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "witnessed_at": {
+      "type": "string",
+      "description": "ISO 8601 timestamp with UTC Z suffix \u2014 when WARD observed the source event",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?Z$"
+    },
+    "source_kind": {
+      "type": "string",
+      "description": "The kind of source event being witnessed",
+      "enum": [
+        "AEE",
+        "AOCL",
+        "VOLT",
+        "WARD",
+        "EXTERNAL"
+      ]
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Identifier of the source event. For WARD meta-chain entries, format is <chain_id>::<tip_seq>",
+      "minLength": 1
+    },
+    "payload_hash": {
+      "type": "string",
+      "description": "SHA-256 hex digest of the source event's canonical content",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prev_chain_hash": {
+      "type": "string",
+      "description": "Previous entry's chain_hash, or genesis_hash for seq=1",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "chain_hash": {
+      "type": "string",
+      "description": "This entry's computed chain hash: SHA-256 of the canonical JSON of the 10 required fields excluding chain_hash itself (see SPEC.md section 4.4; legacy v0.1 scheme in Appendix A)",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "issuer_id": {
+      "type": "string",
+      "description": "Identifier of the WARD instance that created this entry",
+      "minLength": 1
+    },
+    "source_ts": {
+      "type": "string",
+      "description": "ISO 8601 timestamp from the source event itself (optional)",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?Z$"
+    },
+    "tags": {
+      "type": "array",
+      "description": "String tags for filtering and categorization",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sig": {
+      "type": "string",
+      "description": "Ed25519 signature over chain_hash (base64-encoded, optional)",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_kind": {
+            "const": "WARD"
+          }
+        },
+        "required": [
+          "source_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "source_id": {
+            "pattern": "^(?:[^:]|:(?!:))+::[1-9][0-9]*$",
+            "description": "Meta-chain reference: <sub_chain_id>::<tip_seq>. The sub-chain id contains no \"::\" (single colons allowed), so splitting on the first \"::\" is unambiguous; tip_seq is a positive decimal integer."
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "sig"
+        ]
+      },
+      "then": {
+        "description": "Per-entry signature verification is implementation-defined in v0.2; a sig without a resolvable key identifier is an annotation, not evidence."
+      }
+    },
+    {
+      "if": {
+        "not": {
+          "properties": {
+            "ward_version": {
+              "const": "0.1"
+            }
+          },
+          "required": [
+            "ward_version"
+          ]
+        }
+      },
+      "then": {
+        "properties": {
+          "chain_id": {
+            "pattern": "^(?!.*::).+$"
+          }
+        }
+      }
+    }
+  ]
+}
